@@ -1,2 +1,8 @@
 # LSTM
-LSTM for Bitcoin
+Long-Short Term Memory(LSTM) are an extension of recurrent neural networks, which basically extend their memory to learn from important experiences that have long passed.  LSTMs allow RNNs to remember their inputs over a long period of time. This is because LSTMs hold their information in memory, which can be considered similar to the memory of a computer, in the sense that a neuron in an LSTM can read, write and erase information from its memory.
+
+This memory can be viewed as a locked "cell", where "locked" means that the cell decides whether to store or delete information inside (opening the door or not to store), depending on the importance it assigns to the information it is receiving. The assignment of importance is decided through the weights, which are also learned by the algorithm. This can be seen as learning over time what information is important and what is not.
+
+In an LSTM neuron there are three gates to these information "cells": input gate, forget gate and output gate. These gates determine whether or not a new input is allowed, the information is deleted because it is not important, or it is left to affect the output at the current time step.
+
+The gates in an LSTM are analogous to a sigmoid shape, which means that they go from 0 to 1 in the way we have seen in previous chapters. The fact that they are analogous to a sigmoid activation function as seen above allows them to be incorporated (mathematically speaking) into the Backpropagation process. As we have already mentioned, Vanishing Gradients problems are solved through LSTM because it keeps the gradients sufficiently steep and, therefore, training is relatively short and accuracy is high.
